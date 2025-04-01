@@ -9,43 +9,32 @@ const Hero = () => {
         <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:w-full lg:pb-28 xl:pb-32">
           <div className="pt-10 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="lg:grid lg:grid-cols-2 lg:gap-8">
-                <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
-                  <div className="lg:py-24">
-                    <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 sm:mt-5 sm:text-5xl lg:mt-6 xl:text-6xl">
-                      <span className="block">Health & Wellness</span>
-                      <span className="block text-wellness-600">From A Doctor's Perspective</span>
-                    </h1>
-                    <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                      Evidence-based information to help you make informed health decisions and live your best life. Written by a medical professional who cares.
-                    </p>
-                    <div className="mt-8 sm:mt-12">
-                      <div className="sm:flex justify-start">
-                        <div className="rounded-md shadow">
-                          <Link to="/blog">
-                            <Button className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-wellness-600 hover:bg-wellness-700 md:py-6 md:text-lg md:px-10">
-                              Read Latest Articles
-                            </Button>
-                          </Link>
-                        </div>
-                        <div className="mt-3 sm:mt-0 sm:ml-3">
-                          <Link to="/about">
-                            <Button variant="outline" className="w-full flex items-center justify-center px-8 py-3 border border-wellness-600 text-wellness-600 hover:bg-wellness-50 md:py-6 md:text-lg md:px-10">
-                              About Me
-                            </Button>
-                          </Link>
-                        </div>
+              <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left">
+                <div className="lg:py-24">
+                  <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 sm:mt-5 sm:text-5xl lg:mt-6 xl:text-6xl">
+                    <span className="block">Health & Wellness</span>
+                    <span className="block text-wellness-600">From A Doctor's Perspective</span>
+                  </h1>
+                  <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                    Evidence-based information to help you make informed health decisions and live your best life. Written by a medical professional who cares.
+                  </p>
+                  <div className="mt-8 sm:mt-12">
+                    <div className="sm:flex justify-start">
+                      <div className="rounded-md shadow">
+                        <Link to="/blog">
+                          <Button className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-wellness-600 hover:bg-wellness-700 md:py-6 md:text-lg md:px-10">
+                            Read Latest Articles
+                          </Button>
+                        </Link>
+                      </div>
+                      <div className="mt-3 sm:mt-0 sm:ml-3">
+                        <Link to="/about">
+                          <Button variant="outline" className="w-full flex items-center justify-center px-8 py-3 border border-wellness-600 text-wellness-600 hover:bg-wellness-50 md:py-6 md:text-lg md:px-10">
+                            About Me
+                          </Button>
+                        </Link>
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="mt-12 lg:m-0 lg:relative">
-                  <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:px-0 lg:max-w-none lg:h-full">
-                    <img
-                      className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-                      src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                      alt="Doctor writing notes"
-                    />
                   </div>
                 </div>
               </div>
