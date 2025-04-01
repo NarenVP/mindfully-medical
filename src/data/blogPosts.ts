@@ -21,9 +21,9 @@ export interface BlogPost {
 }
 
 const doctorAuthor: Author = {
-  name: "Dr. Sarah Johnson",
-  avatar: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
-  bio: "Dr. Sarah Johnson is a board-certified physician with over 10 years of experience. She specializes in preventive medicine and is passionate about empowering patients through education."
+  name: "Dr. Jayanth V P",
+  avatar: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80",
+  bio: "Dr. Jayanth V P is a 25-year-old physician with a special interest in natural remedies and integrative medicine. He's dedicated to sharing evidence-based health information that combines conventional and complementary approaches."
 };
 
 export const blogPosts: BlogPost[] = [
