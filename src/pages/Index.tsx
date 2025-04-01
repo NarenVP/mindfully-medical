@@ -8,7 +8,7 @@ import Footer from '@/components/layout/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-sage-50 to-white">
       <Navbar />
       <main className="flex-grow">
         <Hero />

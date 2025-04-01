@@ -63,30 +63,42 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-        wellness: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-        },
-        healing: {
-          50: '#ecfdf5',
-          100: '#d1fae5',
-          200: '#a7f3d0',
-          300: '#6ee7b7',
-          400: '#34d399',
-          500: '#10b981',
-          600: '#059669',
-          700: '#047857',
-          800: '#065f46',
-          900: '#064e3b',
-        }
+				wellness: {
+					50: '#f0f7ff',
+					100: '#e0efff',
+					200: '#c7e1ff',
+					300: '#a0cfff',
+					400: '#72b4fc',
+					500: '#3d95f5',
+					600: '#2776e8',
+					700: '#2062d6',
+					800: '#2151ae',
+					900: '#214688',
+				},
+				healing: {
+					50: '#f2f9f6',
+					100: '#e6f5ee',
+					200: '#cdeadc',
+					300: '#a3d7be',
+					400: '#70ba96',
+					500: '#4d9f77',
+					600: '#3a7f5f',
+					700: '#32674e',
+					800: '#2c5341',
+					900: '#264438',
+				},
+				sage: {
+					50: '#f5f8f6',
+					100: '#e9f0ec',
+					200: '#d2e0d9',
+					300: '#afc7bc',
+					400: '#85a799',
+					500: '#65887a',
+					600: '#506e62',
+					700: '#425852',
+					800: '#394945',
+					900: '#313d3a',
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -115,10 +127,10 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			},
-      fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
-        'serif': ['Merriweather', 'serif']
-      }
+			fontFamily: {
+				'sans': ['Inter', 'sans-serif'],
+				'serif': ['Merriweather', 'serif']
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

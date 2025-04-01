@@ -7,10 +7,10 @@ import Footer from '@/components/layout/Footer';
 
 const Blog = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-sage-50 to-white">
       <Navbar />
       <main className="flex-grow">
-        <div className="bg-gray-50 py-16 sm:py-24">
+        <div className="bg-sage-50 py-16 sm:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Health & Wellness Blog</h1>
