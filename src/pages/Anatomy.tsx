@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import SkeletonViewer from '@/components/anatomy/SkeletonViewer';
-import { bone } from 'lucide-react';
+import { Bone } from 'lucide-react';
 
 const Anatomy = () => {
   return (
@@ -13,7 +13,7 @@ const Anatomy = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-10">
             <div className="flex items-center justify-center mb-4">
-              <bone className="h-8 w-8 text-wellness-600 mr-2" />
+              <Bone className="h-8 w-8 text-wellness-600 mr-2" />
               <h1 className="text-3xl font-bold text-gray-900">Human Anatomy Explorer</h1>
             </div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
