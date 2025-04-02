@@ -1,7 +1,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useGLTF, OrbitControls } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -17,50 +17,50 @@ const RunnerModel = ({ position = [0, 0, 0], color = "blue", rotation = [0, 0, 0
       {/* Body */}
       <mesh castShadow>
         <capsuleGeometry args={[0.5, 1, 4, 8]} />
-        <meshStandardMaterial color={color} />
+        <meshStandardMaterial color={new THREE.Color(color)} />
       </mesh>
       
       {/* Head */}
       <mesh castShadow position={[0, 1.2, 0]}>
         <sphereGeometry args={[0.3, 16, 16]} />
-        <meshStandardMaterial color={color} />
+        <meshStandardMaterial color={new THREE.Color(color)} />
       </mesh>
       
       {/* Arms - positioned to simulate running */}
       <mesh castShadow position={[0.7, 0.2, 0]}>
         <capsuleGeometry args={[0.2, 0.8, 4, 8]} />
-        <meshStandardMaterial color={color} />
+        <meshStandardMaterial color={new THREE.Color(color)} />
       </mesh>
       
       <mesh castShadow position={[-0.7, 0.2, 0]}>
         <capsuleGeometry args={[0.2, 0.8, 4, 8]} />
-        <meshStandardMaterial color={color} />
+        <meshStandardMaterial color={new THREE.Color(color)} />
       </mesh>
       
       {/* Legs - positioned to simulate running */}
       <mesh castShadow position={[0.3, -1, 0]}>
         <capsuleGeometry args={[0.2, 0.8, 4, 8]} />
-        <meshStandardMaterial color={color} />
+        <meshStandardMaterial color={new THREE.Color(color)} />
       </mesh>
       
       <mesh castShadow position={[-0.3, -1, 0]}>
         <capsuleGeometry args={[0.2, 0.8, 4, 8]} />
-        <meshStandardMaterial color={color} />
+        <meshStandardMaterial color={new THREE.Color(color)} />
       </mesh>
 
       {/* Baton */}
       <mesh castShadow position={[0.8, 0, 0.3]}>
         <cylinderGeometry args={[0.05, 0.05, 0.4, 8]} />
-        <meshStandardMaterial color="red" />
+        <meshStandardMaterial color={new THREE.Color("red")} />
       </mesh>
     </group>
   );
 };
 
 const RunnerAnimation = () => {
-  const maleRunnerRef = useRef();
-  const femaleRunnerRef = useRef();
-  const batonRef = useRef();
+  const maleRunnerRef = useRef<THREE.Group>(null);
+  const femaleRunnerRef = useRef<THREE.Group>(null);
+  const batonRef = useRef<THREE.Mesh>(null);
   const { camera } = useThree();
 
   useEffect(() => {
@@ -140,7 +140,7 @@ const RunnerAnimation = () => {
       {/* Track */}
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -2, 0]} receiveShadow>
         <planeGeometry args={[30, 60]} />
-        <meshStandardMaterial color="#93c5fd" opacity={0.6} transparent />
+        <meshStandardMaterial color={new THREE.Color("#93c5fd")} opacity={0.6} transparent />
       </mesh>
 
       {/* Lighting */}
