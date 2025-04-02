@@ -30,6 +30,9 @@ const Navbar = () => {
             <Link to="/blog" className="text-gray-700 hover:text-wellness-600 px-3 py-2 text-sm font-medium">
               Blog
             </Link>
+            <Link to="/anatomy" className="text-gray-700 hover:text-wellness-600 px-3 py-2 text-sm font-medium">
+              Anatomy
+            </Link>
             <Link to="/about" className="text-gray-700 hover:text-wellness-600 px-3 py-2 text-sm font-medium">
               About
             </Link>
@@ -65,6 +68,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Blog
+            </Link>
+            <Link 
+              to="/anatomy" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-wellness-600 hover:bg-gray-50"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Anatomy
             </Link>
             <Link 
               to="/about" 
