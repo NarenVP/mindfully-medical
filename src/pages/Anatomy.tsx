@@ -21,7 +21,7 @@ const Anatomy = () => {
             </p>
           </div>
           
-          <div className="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden mb-16">
+          <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden mb-16">
             <SkeletonViewer />
           </div>
           
