@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Card, CardContent } from "@/components/ui/card";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 // Define the skeletal parts and their information based on Britannica
 interface SkeletalPart {
@@ -107,69 +106,64 @@ const skeletalParts: SkeletalPart[] = [
 
 const SkeletonViewer: React.FC = () => {
   const [selectedPart, setSelectedPart] = useState<SkeletalPart | null>(null);
-  const [activeView, setActiveView] = useState("skeleton");
+  const [openPopoverId, setOpenPopoverId] = useState<string | null>(null);
 
   const handlePartClick = (part: SkeletalPart) => {
     setSelectedPart(part);
-    setActiveView("info");
+    setOpenPopoverId(part.id);
+  };
+
+  const handleClosePopover = () => {
+    setOpenPopoverId(null);
   };
 
   return (
-    <Tabs value={activeView} onValueChange={setActiveView} className="w-full">
-      <TabsList className="grid w-full grid-cols-2">
-        <TabsTrigger value="skeleton">Skeleton View</TabsTrigger>
-        <TabsTrigger value="info">Part Information</TabsTrigger>
-      </TabsList>
-      <TabsContent value="skeleton" className="pt-6">
-        <div className="relative flex justify-center mb-4">
-          <img 
-            src="/lovable-uploads/af4ca345-dbef-4e45-bd18-4f043034e84e.png" 
-            alt="Human Skeleton" 
-            className="max-h-[600px] object-contain"
-          />
-          {skeletalParts.map((part) => (
-            <Tooltip key={part.id}>
+    <TooltipProvider>
+      <div className="relative flex justify-center mb-4">
+        <img 
+          src="/lovable-uploads/af4ca345-dbef-4e45-bd18-4f043034e84e.png" 
+          alt="Human Skeleton" 
+          className="max-h-[600px] object-contain"
+        />
+        {skeletalParts.map((part) => (
+          <Popover key={part.id} open={openPopoverId === part.id} onOpenChange={(open) => {
+            if (open) setOpenPopoverId(part.id);
+            else setOpenPopoverId(null);
+          }}>
+            <Tooltip>
               <TooltipTrigger asChild>
-                <div
-                  className="absolute cursor-pointer bg-transparent hover:bg-wellness-600/20 border-2 border-transparent hover:border-wellness-600 rounded-md transition-colors"
-                  style={{
-                    left: `${part.coordinates.x}%`,
-                    top: `${part.coordinates.y}%`,
-                    width: `${part.coordinates.width}%`,
-                    height: `${part.coordinates.height}%`,
-                  }}
-                  onClick={() => handlePartClick(part)}
-                />
+                <PopoverTrigger asChild>
+                  <div
+                    className="absolute cursor-pointer bg-transparent hover:bg-wellness-600/20 border-2 border-transparent hover:border-wellness-600 rounded-md transition-colors"
+                    style={{
+                      left: `${part.coordinates.x}%`,
+                      top: `${part.coordinates.y}%`,
+                      width: `${part.coordinates.width}%`,
+                      height: `${part.coordinates.height}%`,
+                    }}
+                    onClick={() => handlePartClick(part)}
+                  />
+                </PopoverTrigger>
               </TooltipTrigger>
               <TooltipContent>
                 <p>{part.name}</p>
               </TooltipContent>
             </Tooltip>
-          ))}
-        </div>
-        <div className="text-center text-sm text-gray-500">
-          Click on any region of the skeleton to learn more
-        </div>
-      </TabsContent>
-      <TabsContent value="info" className="pt-6">
-        <Card>
-          <CardContent className="pt-6">
-            {selectedPart ? (
-              <div>
-                <h3 className="text-xl font-bold mb-2">{selectedPart.name}</h3>
-                <p className="text-gray-700 mb-4">{selectedPart.description}</p>
-                <h4 className="font-semibold text-sm text-gray-600 mb-1">Function:</h4>
-                <p className="text-gray-700">{selectedPart.function}</p>
+            <PopoverContent className="w-80 p-4" onInteractOutside={handleClosePopover}>
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold">{part.name}</h3>
+                <p className="text-gray-700">{part.description}</p>
+                <h4 className="font-semibold text-sm text-gray-600 mt-3 mb-1">Function:</h4>
+                <p className="text-gray-700">{part.function}</p>
               </div>
-            ) : (
-              <div className="text-center py-10">
-                <p className="text-gray-500">Select a skeletal part from the skeleton view to see information</p>
-              </div>
-            )}
-          </CardContent>
-        </Card>
-      </TabsContent>
-    </Tabs>
+            </PopoverContent>
+          </Popover>
+        ))}
+      </div>
+      <div className="text-center text-sm text-gray-500">
+        Click on any region of the skeleton to learn more
+      </div>
+    </TooltipProvider>
   );
 };
 

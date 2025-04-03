@@ -22,7 +22,9 @@ const Anatomy = () => {
           </div>
           
           <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden mb-16">
-            <SkeletonViewer />
+            <div className="p-6">
+              <SkeletonViewer />
+            </div>
           </div>
           
           <div className="grid md:grid-cols-2 gap-10">
