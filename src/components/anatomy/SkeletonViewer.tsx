@@ -23,7 +23,7 @@ const skeletalParts: SkeletalPart[] = [
     name: 'Skull',
     description: 'A complex structure containing 22 bones that protect the brain and form the face.',
     function: 'Protects the brain, supports facial structures, and houses sense organs for sight, smell, taste, and hearing.',
-    coordinates: { x: 50, y: 8 }
+    coordinates: { x: 50, y: 12 }
   },
   {
     id: 'spine',
@@ -44,35 +44,35 @@ const skeletalParts: SkeletalPart[] = [
     name: 'Shoulder Girdle',
     description: 'Formed by the clavicle (collarbone) and scapula (shoulder blade) on each side.',
     function: 'Connects the arms to the axial skeleton and provides attachment sites for numerous muscles.',
-    coordinates: { x: 35, y: 18 }
+    coordinates: { x: 39, y: 19 }
   },
   {
     id: 'pelvis',
     name: 'Pelvic Girdle',
     description: 'Consists of paired hip bones (ilium, ischium, and pubis) that connect to the sacrum.',
     function: 'Supports the weight of the upper body and transfers it to the lower limbs while protecting pelvic organs.',
-    coordinates: { x: 50, y: 50 }
+    coordinates: { x: 50, y: 52 }
   },
   {
     id: 'humerus',
     name: 'Humerus',
     description: 'The long bone of the upper arm extending from shoulder to elbow.',
     function: 'Forms the ball-and-socket joint with the scapula and connects to the forearm at the elbow.',
-    coordinates: { x: 25, y: 28 }
+    coordinates: { x: 32, y: 30 }
   },
   {
     id: 'radius-ulna',
     name: 'Radius & Ulna',
     description: 'Parallel long bones of the forearm; the ulna is on the pinky side and the radius on the thumb side.',
     function: 'Enable rotation of the forearm and provide attachments for muscles controlling the hand and fingers.',
-    coordinates: { x: 20, y: 40 }
+    coordinates: { x: 28, y: 40 }
   },
   {
     id: 'hands',
     name: 'Hands',
     description: 'Complex structures with 27 bones in each: 8 carpals (wrist), 5 metacarpals (palm), and 14 phalanges (fingers).',
     function: 'Provide dexterity for precise manipulation of objects through a complex system of joints and tendons.',
-    coordinates: { x: 15, y: 55 }
+    coordinates: { x: 25, y: 50 }
   },
   {
     id: 'femur',
@@ -93,14 +93,14 @@ const skeletalParts: SkeletalPart[] = [
     name: 'Tibia & Fibula',
     description: 'The tibia (shinbone) is the larger weight-bearing bone, while the fibula is the slender lateral bone.',
     function: 'Support body weight, provide attachment for leg muscles, and form the ankle joint with foot bones.',
-    coordinates: { x: 45, y: 85 }
+    coordinates: { x: 45, y: 87 }
   },
   {
     id: 'feet',
     name: 'Feet',
     description: '26 bones in each foot: 7 tarsals (ankle), 5 metatarsals (midfoot), and 14 phalanges (toes).',
     function: 'Support body weight, absorb shock during locomotion, and provide leverage for propulsion during walking and running.',
-    coordinates: { x: 45, y: 97 }
+    coordinates: { x: 45, y: 95 }
   },
 ];
 
