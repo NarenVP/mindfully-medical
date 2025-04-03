@@ -18,6 +18,7 @@ const Anatomy = () => {
             </div>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Explore the human skeletal system. The adult human skeleton consists of 206 bones that provide the structural framework for the body.
+              Click on the circular markers to learn more about each part.
             </p>
           </div>
           
