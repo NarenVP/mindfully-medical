@@ -17,8 +17,13 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <Link to="/" className="text-2xl font-serif font-bold text-wellness-700">
-                Mindfully Medical
+              <Link to="/" className="flex items-center">
+                <img 
+                  src="/lovable-uploads/3c293aba-9f50-4e50-b3aa-cecb453d612c.png" 
+                  alt="Mindfully Medical Logo" 
+                  className="h-10 mr-3"
+                />
+                <span className="text-2xl font-serif font-bold text-wellness-700">Mindfully Medical</span>
               </Link>
             </div>
           </div>

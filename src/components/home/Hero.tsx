@@ -11,6 +11,13 @@ const Hero = () => {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left">
                 <div className="lg:py-24">
+                  <div className="flex items-center justify-center lg:justify-start mb-6">
+                    <img 
+                      src="/lovable-uploads/3c293aba-9f50-4e50-b3aa-cecb453d612c.png" 
+                      alt="Mindfully Medical Logo" 
+                      className="h-16 brain-logo" 
+                    />
+                  </div>
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 sm:mt-5 sm:text-5xl lg:mt-6 xl:text-6xl">
                     <span className="block">Health & Wellness</span>
                     <span className="block text-wellness-600">From A Doctor's Perspective</span>

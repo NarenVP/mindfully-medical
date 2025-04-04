@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Brain Logo glow effect */
+.brain-logo {
+  transition: filter 0.3s ease;
+}
+
+.brain-logo:hover {
+  filter: drop-shadow(0 0 8px rgba(61, 149, 245, 0.8));
+}
