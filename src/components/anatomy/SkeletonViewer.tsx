@@ -141,28 +141,28 @@ const SkeletonViewer: React.FC = () => {
                     }}
                     onClick={() => handlePartClick(part)}
                   >
-                    <div className="h-3 w-3 rounded-full bg-white border border-black flex items-center justify-center hover:scale-125 transition-transform">
-                      {/* The white circle with black border */}
+                    <div className="h-3 w-3 rounded-full bg-blue border-2 border-white shadow-sm flex items-center justify-center hover:scale-125 transition-transform">
+                      {/* The marker circle */}
                     </div>
                   </div>
                 </PopoverTrigger>
               </TooltipTrigger>
-              <TooltipContent>
+              <TooltipContent className="bg-navy text-white">
                 <p>{part.name}</p>
               </TooltipContent>
             </Tooltip>
-            <PopoverContent className="w-80 p-4" onInteractOutside={handleClosePopover}>
+            <PopoverContent className="w-80 p-4 bg-white border border-blue-light shadow-md" onInteractOutside={handleClosePopover}>
               <div className="space-y-2">
-                <h3 className="text-xl font-bold">{part.name}</h3>
-                <p className="text-gray-700">{part.description}</p>
-                <h4 className="font-semibold text-sm text-gray-600 mt-3 mb-1">Function:</h4>
-                <p className="text-gray-700">{part.function}</p>
+                <h3 className="text-xl font-bold text-navy">{part.name}</h3>
+                <p className="text-navy-light">{part.description}</p>
+                <h4 className="font-semibold text-sm text-blue mt-3 mb-1">Function:</h4>
+                <p className="text-navy-light">{part.function}</p>
               </div>
             </PopoverContent>
           </Popover>
         ))}
       </div>
-      <div className="text-center text-sm text-gray-500">
+      <div className="text-center text-sm text-blue">
         Click on any marker to learn more about that part of the skeleton
       </div>
     </TooltipProvider>
