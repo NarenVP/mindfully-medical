@@ -15,7 +15,7 @@ const Hero = () => {
                     <img 
                       src="/lovable-uploads/3c293aba-9f50-4e50-b3aa-cecb453d612c.png" 
                       alt="Mindfully Medical Logo" 
-                      className="h-16 brain-logo" 
+                      className="h-24 sm:h-28 md:h-32 brain-logo" 
                     />
                   </div>
                   <h1 className="mt-4 text-4xl tracking-tight font-extrabold text-gray-900 sm:mt-5 sm:text-5xl lg:mt-6 xl:text-6xl">
