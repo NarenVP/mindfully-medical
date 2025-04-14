@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Mail } from 'lucide-react';
 
@@ -9,13 +10,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center justify-start">
-              <img 
-                src="/lovable-uploads/3c293aba-9f50-4e50-b3aa-cecb453d612c.png" 
-                alt="Mindfully Medical Logo" 
-                className="h-16 sm:h-20 brain-logo" 
-              />
-            </Link>
+            <p className="text-xl font-serif font-bold text-wellness-700">Mindfully Medical</p>
             <p className="mt-2 text-sm text-gray-600 max-w-md">
               Empowering you with evidence-based health information and wellness tips for a balanced and mindful life.
             </p>
