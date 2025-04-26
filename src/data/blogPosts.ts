@@ -26,9 +26,9 @@ export const blogPosts: BlogPost[] = [
     date: "2024-01-20",
     author: {
       name: "Health Expert",
-      avatar: "/placeholder.svg"
+      avatar: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
     },
-    coverImage: "/placeholder.svg",
+    coverImage: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
     category: "Mental Health",
     readTime: "7 min",
   },
@@ -41,9 +41,9 @@ export const blogPosts: BlogPost[] = [
     date: "2024-02-15",
     author: {
       name: "Sleep Specialist",
-      avatar: "/placeholder.svg"
+      avatar: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     },
-    coverImage: "/placeholder.svg",
+    coverImage: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     category: "Sleep",
     readTime: "10 min",
   },
@@ -56,9 +56,9 @@ export const blogPosts: BlogPost[] = [
     date: "2024-03-10",
     author: {
       name: "Nutrition Expert",
-      avatar: "/placeholder.svg"
+      avatar: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     },
-    coverImage: "/placeholder.svg",
+    coverImage: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     category: "Nutrition",
     readTime: "8 min",
   },
