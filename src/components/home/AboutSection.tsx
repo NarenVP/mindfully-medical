@@ -12,7 +12,7 @@ const AboutSection = () => {
               Health Information You Can Trust
             </h2>
             <p className="mt-3 max-w-3xl text-lg text-gray-500">
-              As a practicing physician with over 10 years of experience, I'm passionate about providing accurate, 
+              As medical professionals with years of experience, we're passionate about providing accurate, 
               evidence-based health information that empowers people to make informed decisions about their wellbeing.
             </p>
             <div className="mt-8 space-y-4">
@@ -71,7 +71,7 @@ const AboutSection = () => {
                   variant="outline"
                   className="border-wellness-600 text-wellness-600 hover:bg-wellness-50"
                 >
-                  Learn More About Me
+                  Learn More About Us
                 </Button>
               </Link>
             </div>
@@ -82,7 +82,7 @@ const AboutSection = () => {
               <img
                 className="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                 src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Doctor reviewing a patient chart"
+                alt="Medical professional reviewing a patient chart"
               />
             </div>
           </div>
