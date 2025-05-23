@@ -3,12 +3,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { SubscriptionModal } from '@/components/subscription/SubscriptionModal';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isSubscribeModalOpen, setIsSubscribeModalOpen] = React.useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const openSubscribeModal = () => {
+    setIsSubscribeModalOpen(true);
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
   };
 
   return (
@@ -33,7 +42,11 @@ const Navbar = () => {
             <Link to="/about" className="text-gray-700 hover:text-wellness-600 px-3 py-2 text-sm font-medium">
               About
             </Link>
-            <Button variant="outline" className="border-wellness-600 text-wellness-600 hover:bg-wellness-50">
+            <Button 
+              variant="outline" 
+              className="border-wellness-600 text-wellness-600 hover:bg-wellness-50"
+              onClick={openSubscribeModal}
+            >
               Subscribe
             </Button>
           </div>
@@ -77,6 +90,7 @@ const Navbar = () => {
               <Button 
                 variant="outline" 
                 className="w-full border-wellness-600 text-wellness-600 hover:bg-wellness-50"
+                onClick={openSubscribeModal}
               >
                 Subscribe
               </Button>
@@ -84,6 +98,12 @@ const Navbar = () => {
           </div>
         </div>
       )}
+      
+      {/* Subscription Modal */}
+      <SubscriptionModal 
+        open={isSubscribeModalOpen} 
+        onOpenChange={setIsSubscribeModalOpen} 
+      />
     </nav>
   );
 };
