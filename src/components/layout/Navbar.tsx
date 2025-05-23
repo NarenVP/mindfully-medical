@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { SubscriptionModal } from '@/components/subscription/SubscriptionModal';
+import { toast } from '@/hooks/use-toast';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -14,11 +14,23 @@ const Navbar = () => {
   };
 
   const openSubscribeModal = () => {
+    console.log('Opening subscribe modal');
     setIsSubscribeModalOpen(true);
+    console.log('Modal state set to open:', true);
+    
     if (isMenuOpen) {
       setIsMenuOpen(false);
     }
+    
+    // Visual feedback via toast
+    toast({
+      title: "Opening subscription form",
+      description: "Please wait a moment...",
+      duration: 2000,
+    });
   };
+
+  console.log('Current modal open state:', isSubscribeModalOpen);
 
   return (
     <nav className="bg-white/80 backdrop-blur-sm shadow-sm sticky top-0 z-10">
